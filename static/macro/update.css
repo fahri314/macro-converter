@@ -1,0 +1,128 @@
+/* MIT License */
+
+changelists {
+  display: block;
+  position: relative;
+}
+
+changelists changelist {
+  display: block;
+  position: relative;
+  padding-top: 28px;
+  padding-left: 28px;
+  padding-bottom: 80px;
+}
+
+changelists changelist:before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 4px;
+  bottom: 0px;
+  background-color: rgba(128,128,128,0.5);
+}
+
+changelists changelist:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 30px;
+  width: 4px;
+  bottom: 0px;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(128,128,128,0.5), rgba(128,128,128,0.5), rgba(255,255,255,0));
+}
+
+changelists changelist version {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  padding: 4px;
+  color: #fefaf9;
+  border-radius: 3px;
+  background-color: #CD412B;
+}
+
+changelists changelist information {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  right: 0px;
+  height: 30px;
+  padding: 4px;
+  color: #c5bbb4;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+changelists changelist ul {
+  list-style: none;
+  margin: 0rem;
+}
+
+changelists changelist ul li {
+  list-style: none;
+  margin-bottom: 1px;
+  font-size: 13px;
+  line-height: 15px;
+  position: relative;
+}
+
+p {
+	margin-bottom: 1px;
+	color: #948c87;
+	font-size: 13px;
+}
+changelists changelist ul li .subtitle {
+  padding: 10px;
+}
+
+changelists changelist ul li p {
+  margin-left: 85px;
+  padding: 0 !important;
+  line-height: 20px;
+}
+
+changelists changelist ul li changetype {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F6BA0;
+  border-radius: 2px;
+  width: 80px;
+  text-align: center;
+  font-size: 10px;
+  padding: 2px;
+  text-transform: uppercase;
+  color: #74b6e4;
+  margin-right: 5px;
+}
+
+changelists changelist ul li changetype.is-a {
+  background-color: #738D45;
+  color: #bdcf9c;
+}
+
+changelists changelist ul li changetype.is-d {
+  background-color: #ff3860;
+  color: #ffd1da;
+}
+
+changelists changelist ul li .subtitle {
+  padding: 10px;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+

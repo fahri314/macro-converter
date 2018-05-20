@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]--><head class="no-js">
+	<title>Home  |   macro project</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+	<link rel="stylesheet" id="screen-css" href="{% static "macro/style.css" %}?ver=2.0" type="text/css" media="all">
+	<script type="text/javascript" src="{% static "macro/jquery.js"%}?ver=1.11.3"></script>
+	<script type="text/javascript" src="{% static "macro/jquery-migrate.min.js"%}?ver=1.2.1"></script>
+	<style>
+	.tooltip {
+	    position: relative;
+	    display: inline-block;
+	}
+	.tooltip .tooltiptext {
+	    visibility: hidden;
+	    width: 140px;
+	    background-color: #555;
+	    color: #fff;
+	    text-align: center;
+	    border-radius: 6px;
+	    padding: 5px;
+	    position: absolute;
+	    z-index: 1;
+	    bottom: 150%;
+	    left: 50%;
+	    margin-left: -75px;
+	    opacity: 0;
+	    transition: opacity 0.3s;
+	}
+	.tooltip .tooltiptext::after {
+	    content: "";
+	    position: absolute;
+	    top: 100%;
+	    left: 50%;
+	    margin-left: -5px;
+	    border-width: 5px;
+	    border-style: solid;
+	    border-color: #555 transparent transparent transparent;
+	}
+	.tooltip:hover .tooltiptext {
+	    visibility: visible;
+	    opacity: 1;
+	}
+	</style>
+</head>
+<body>
+<!--[if lt IE 8]>
+  <p class="browsehappy">It looks like you're using an insecure version of Internet Explorer. Using an outdated browser makes your computer unsafe. On Windows XP, you are unable to update to the latest version. For the best experience on the web, we suggest you <a href="http://browsehappy.com">try a new browser</a>.</p>
+<![endif]-->
+	<div class="container">
+		<header class="header">
+			<div class="logo">
+			    <a href="/">
+			    	<img src="{% static "images/logo1.png" %}" border="0" onmouseover="this.src='{% static "images/logo2.png" %}'" onmouseout="this.src='{% static "images/logo1.png" %}'">
+			    </a>
+			</div>
+		</header>
+		<nav class="nav">
+			<div id="navi">
+		    	<div class="menu-mainnav-container">
+		    		<ul id="menu-mainnav" class="menu">
+		    			<li id="menu-item" class="current-menu-item"><a href="/">Home</a></li>
+						<li id="menu-item" class="menu-item"><a href="/about">About</a></li>
+						<li id="menu-item" class="menu-item"><a href="/contribute">Contribute</a></li>
+						<li id="menu-item" class="menu-item"><a href="/examples">Examples</a></li>
+						<li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a></li>
+						<li id="menu-item" class="menu-item"><a href="/contact">Contact</a></li>
+					</ul>
+				</div><div class="clr"></div>
+		    </div>
+		</nav>
+		<br>
+		<nav class="nav">
+				<div id="navi">
+		    		<center>~ Macro conversion project from Excel macro to LibreOffice macro ~</center><div class="clr"></div>
+		    	</div>
+		</nav>
+		<div class="clear"></div>
+		<div class="homepage">
+			<div class="sixcolumns">
+				<div class="homeleft">
+					<form method="GET" action="">
+						<textarea rows="8" cols="50" name="entries" wrap="off" style="style=overflow:auto;font-size: 14px;">{{entries}}</textarea>
+						<input type="submit" value="CONVERT" />
+						<div id="splash-buttons">
+						<div id="buttons">
+						<div class=".clr">&nbsp;</div>
+						</div>
+						</div>
+					</form>
+					<center class="social-icons">
+						<br>
+						<a href="https://facebook.com/fguresci2" target="_blank"><img src="{% static "images/facebook.png" %}" alt="facebook" title="facebook"></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/fahri314" target="_blank"><img src="{% static "images/github.png" %}" alt="github" title="github"></a>&nbsp;&nbsp;&nbsp;<a href="https://google.com/+FahriGüreşçi" target="_blank"><img src="{% static "images/googleplus.png" %}" alt="googleplus" title="googleplus"></a>
+					</center><p></p>
+				</div>
+			</div>
+			<div class="sixcolumns">
+				<div class="homeright">
+					<textarea rows="8" cols="50" name="exits" id="exits" wrap="off" style="style=overflow:auto;font-size: 14px;">{{exits}}</textarea>
+	  				<div class="tooltip">
+	  					<button onclick="clipboard()" onmouseout="out()">
+	  						<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+	  						Copy text
+	  					</button>
+						<script>
+							function clipboard() {
+								var copyText = document.getElementById("exits");
+								copyText.select();
+								document.execCommand("Copy");
+							  
+								var tooltip = document.getElementById("myTooltip");
+								tooltip.innerHTML = "Copied"
+							}
+							function out() {
+								var tooltip = document.getElementById("myTooltip");
+								tooltip.innerHTML = "Copy to clipboard";
+							}
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="clear">
+			<div class="footerarea">
+				<div class="footerlogos">
+					<table>
+						<tr>
+							<td>
+								<br>
+								<div align="left"><img src="{% static "images/sub1.png" %}"></div>
+							</td>
+							<td>
+								<div align="right"><img src="{% static "images/sub2.png" %}"><br><br></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			Copyright © 2018 Macro Converter<br><br>
+			This project has no connection with <br>The Document Foundation
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"><!--<![endif]--><head class="no-js">
+	<title>Home  |   macro project</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{% static "images/favicon.ico" %}">
+	<link rel="stylesheet" id="screen-css" href="{% static "macro/style.css" %}?ver=2.0" type="text/css" media="all">
+	<script type="text/javascript" src="{% static "macro/jquery.js"%}?ver=1.11.3"></script>
+	<script type="text/javascript" src="{% static "macro/jquery-migrate.min.js"%}?ver=1.2.1"></script>
+	<style type="text/css">
+		div.secpageright {
+   			display: inline;
+    		float: left;
+    		width: 850px;
+    		margin: 0 10px;
+    	}
+    	div.container {
+    		width: 1140px;
+    	}
+ 	</style>
+ 	<style type="text/css">
+ 		table.steelBlueCols {
+			border: 4px solid #555555;
+			background-color: #555555;
+			width: 400px;
+			text-align: left;
+			border-collapse: collapse;
+			}
+		table.steelBlueCols td, table.steelBlueCols th {
+			border: 1px solid #474747;
+			padding: 5px 10px;
+			}
+		table.steelBlueCols tbody td {
+			font-size: 12px;
+			font-weight: bold;
+			color: #FFFFFF;
+			}
+		table.steelBlueCols td:nth-child(even) {
+			background: #398AA4;
+			}
+		table.steelBlueCols tfoot td {
+			font-size: 13px;
+			}
+		table.steelBlueCols tfoot .links {
+			text-align: right;
+			}
+		table.steelBlueCols tfoot .links a{
+			display: inline-block;
+			background: #FFFFFF;
+			color: #398AA4;
+			padding: 2px 8px;
+			border-radius: 5px;
+			}
+ 	</style>
+</head>
+<body>
+<!--[if lt IE 8]>
+  <p class="browsehappy">It looks like you're using an insecure version of Internet Explorer. Using an outdated browser makes your computer unsafe. On Windows XP, you are unable to update to the latest version. For the best experience on the web, we suggest you <a href="http://browsehappy.com">try a new browser</a>.</p>
+<![endif]-->
+	<div class="container">
+		<header class="header">
+			<div class="logo">
+			    <a href="/">
+			    	<img src="{% static "images/logo1.png" %}" border="0" onmouseover="this.src='{% static "images/logo2.png" %}'" onmouseout="this.src='{% static "images/logo1.png" %}'">
+			    </a>
+			</div>
+		</header>
+		<nav class="nav">
+			<div id="navi">
+		    	<div class="menu-mainnav-container">
+		    		<ul id="menu-mainnav" class="menu">
+		    			<li id="menu-item" class="menu-item"><a href="/">Home</a></li>
+						<li id="menu-item" class="menu-item"><a href="/about">About</a></li>
+						<li id="menu-item" class="menu-item"><a href="/contribute">Contribute</a></li>
+						<li id="menu-item" class="current-menu-item"><a href="/examples">Examples</a></li>
+						<li id="menu-item" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="https://www.libreoffice.org/" target="_blank">LibreOffice</a></li>
+						<li id="menu-item" class="menu-item"><a href="/contact">Contact</a></li>
+					</ul>
+				</div><div class="clr"></div>
+		    </div>
+		</nav>
+		<br>
+		<nav class="nav">
+				<div id="navi">
+		    		<center>~ Macro conversion project from Excel macro to LibreOffice macro ~</center><div class="clr"></div>
+		    	</div>
+		</nav>
+		<div class="clear"></div>
+		<div class="homepage">
+			<div class="secpages">
+    			<div class="secpageleft">
+    				<div class="secnav">
+						<h2>Examples</h2>
+    				</div>
+    			</div>
+    		<div class="secpageright">
+    			<div class="seccontent">
+    				<h3>Example 1</h3>
+					<table class="steelBlueCols">
+						<tbody>
+							<tr>
+								<td>Exel VBA</td>
+								<td>ActiveWorkbook</td>
+							</tr>
+							<tr>
+								<td>LibreOfiice Basic</td>
+								<td>ThisComponent</td>
+							</tr>
+						</tbody>
+					</table>
+    				<h3>Example 2</h3>
+					<table class="steelBlueCols">
+						<tbody>
+							<tr>
+								<td>Exel VBA</td>
+								<td>ActiveCell</td>
+							</tr>
+							<tr>
+								<td>LibreOfiice Basic</td>
+								<td>ThisComponent.getCurrentSelection</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Example 3</h3>
+					<table class="steelBlueCols">
+						<tbody>
+							<tr>
+								<td>Exel VBA</td>
+								<td>Range("A1").Select</td>
+							</tr>
+							<tr>
+								<td>LibreOfiice Basic</td>
+								<td>ThisComponent.CurrentController.select(ThisComponent.CurrentController.ActiveSheet.getCellRangeByName(("A1")))</td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Example 4</h3>
+					<table class="steelBlueCols">
+						<tbody>
+							<tr>
+								<td>Exel VBA</td>
+								<td>Selection.Value</td>
+							</tr>
+							<tr>
+								<td>LibreOfiice Basic</td>
+								<td>ThisComponent.getCurrentSelection.Value</td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<br>
+				</div>
+			</div>
+			<div class="clr">&nbsp;</div>
+    		</div>
+		</div>
+		<footer class="clear">
+			<div class="footerarea">
+				<div class="footerlogos">
+					<table>
+						<tr>
+							<td>
+								<br>
+								<div align="left"><img src="{% static "images/sub1.png" %}"></div>
+							</td>
+							<td>
+								<div align="right"><img src="{% static "images/sub2.png" %}"><br><br></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+			Copyright © 2018 Macro Converter
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
