@@ -13,7 +13,7 @@ This project can only achieve a certain level of success.
 
 We are waiting for your help. If you find a code match, send it to us. We will review matching and add at the project.
 
-[![Macro Converter](https://github.com/fahri314/macro-converter/raw/master/static/video/video-poster.jpg)](https://github.com/fahri314/macro-converter/raw/master/static/video/macro-converter.mp4)
+![](https://github.com/fahri314/macro-converter/raw/master/static/video/macro-converter.gif)
 
 # Benefits
 
