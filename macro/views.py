@@ -276,4 +276,4 @@ def contribute(request):
 		return render(request,'contribute.html',{'robot':robot})
 
 def test(request):
-	return HttpResponse('<h2>test page </h2>')
+	return HttpResponse('<h2>test page</h2>')
