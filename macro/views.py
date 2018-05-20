@@ -6,40 +6,40 @@ from .send_mail import send
 
 def home_view(request):
     items = {
-        "ActiveWorkbook"						: "ThisComponent",
-        "ActiveCell"							: "ThisComponent.getCurrentSelection",
-        "Application.ScreenUpdating = True"		: "ThisComponent.UnlockControllers",
-        "Application.ScreenUpdating = False"	: "ThisComponent.LockControllers",
-        "Selection.Value"						: "ThisComponent.getCurrentSelection.Value",
+        "ActiveWorkbook"                        : "ThisComponent",
+        "ActiveCell"                            : "ThisComponent.getCurrentSelection",
+        "Application.ScreenUpdating = True"     : "ThisComponent.UnlockControllers",
+        "Application.ScreenUpdating = False"    : "ThisComponent.LockControllers",
+        "Selection.Value"                       : "ThisComponent.getCurrentSelection.Value",
         #vbMsgBoxStyle Arguments
-        "vbOKOnly"								: "0",	# MB_OK - OK button
-        "vbOKCancel"							: "1",	# MB_OKCANCEL - OK and Cancel button
-        "vbAbortRetryIgnore"					: "2",	# MB_ABORTRETRYIGNORE - Abort, Retry, and Ignore buttons
-        "vbYesNoCancel"							: "3",	# MB_YESNOCANCEL - Yes, No, and Cancel buttons
-        "vbYesNo"								: "4",	# MB_YESNO - Yes and No buttons
-        "vbRetryCancel"							: "5",	# MB_RETRYCANCEL - Retry and Cancel buttons
-        "vbCritical"							: "16",	# MB_ICONSTOP - Stop sign
-        "vbQuestion"							: "32",	# MB_ICONQUESTION - Question mark
-        "vbExclamation"							: "48",	# MB_ICONEXCLAMATION - Exclamation point
-        "vbInformation"							: "64",	# MB_ICONINFORMATION - Tip icon
-        "vbDefaultButton1"						: "0",	# MB_DEFBUTTON1 - First button is default value
-        "vbDefaultButton2"						: "256",	# MB_DEFBUTTON2 - Second button is default value
-        "vbDefaultButton3"						: "512",	# MB_DEFBUTTON3 - Third button is default value
-        "vbDefaultButton4"						: "768",
-        "vbApplicationModal"					: "0",
-        "vbSystemModal"							: "4096",
-        "vbMsgBoxHelpButton"					: "16384",
-        "VbMsgBoxSetForeground"					: "65536",
-        "vbMsgBoxRight"							: "524288",
-        "vbMsgBoxRtlReading"					: "1048576",
+        "vbOKOnly"                              : "0",	# MB_OK - OK button
+        "vbOKCancel"                            : "1",	# MB_OKCANCEL - OK and Cancel button
+        "vbAbortRetryIgnore"                    : "2",	# MB_ABORTRETRYIGNORE - Abort, Retry, and Ignore buttons
+        "vbYesNoCancel"                         : "3",	# MB_YESNOCANCEL - Yes, No, and Cancel buttons
+        "vbYesNo"                               : "4",	# MB_YESNO - Yes and No buttons
+        "vbRetryCancel"                         : "5",	# MB_RETRYCANCEL - Retry and Cancel buttons
+        "vbCritical"                            : "16",	# MB_ICONSTOP - Stop sign
+        "vbQuestion"                            : "32",	# MB_ICONQUESTION - Question mark
+        "vbExclamation"                         : "48",	# MB_ICONEXCLAMATION - Exclamation point
+        "vbInformation"                         : "64",	# MB_ICONINFORMATION - Tip icon
+        "vbDefaultButton1"                      : "0",	# MB_DEFBUTTON1 - First button is default value
+        "vbDefaultButton2"                      : "256",	# MB_DEFBUTTON2 - Second button is default value
+        "vbDefaultButton3"                      : "512",	# MB_DEFBUTTON3 - Third button is default value
+        "vbDefaultButton4"                      : "768",
+        "vbApplicationModal"                    : "0",
+        "vbSystemModal"                         : "4096",
+        "vbMsgBoxHelpButton"                    : "16384",
+        "VbMsgBoxSetForeground"                 : "65536",
+        "vbMsgBoxRight"                         : "524288",
+        "vbMsgBoxRtlReading"                    : "1048576",
         # MsgBox Return Values
-        "vbOK"									: "1",	# IDOK - Ok
-        "vbCancel"								: "2",	# IDCANCEL - Cancel
-        "vbAbort"								: "3",	# IDABORT - Abort
-        "vbRetry"								: "4",	# IDRETRY - Retry
-        "vbIgnore"								: "5",	# - Ignore
-        "vbYes"									: "6",	# IDYES - Yes
-        "vbNo"									: "7",	# IDNO - No
+        "vbOK"                                  : "1",	# IDOK - Ok
+        "vbCancel"                              : "2",	# IDCANCEL - Cancel
+        "vbAbort"                               : "3",	# IDABORT - Abort
+        "vbRetry"                               : "4",	# IDRETRY - Retry
+        "vbIgnore"                              : "5",	# - Ignore
+        "vbYes"                                 : "6",	# IDYES - Yes
+        "vbNo"                                  : "7",	# IDNO - No
         }
 
     entries = request.GET.get('entries')
