@@ -2,8 +2,6 @@ https://macroconverter.com
 
 ![](https://github.com/fahri314/macro-converter/raw/master/static/images/logo1.png)
 
-~ Macro conversion project from Excel macro to LibreOffice macro ~
-
 # Overview
 
 The purpose of the existence of this project, Microsoft Excel workbooks macro codes doesn't works on the libreoffice calc.
